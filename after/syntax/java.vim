@@ -35,6 +35,9 @@ if s:extraConceal
   syntax keyword javaNiceKeyword switch conceal cchar=⋔
   syntax keyword javaNiceKeyword throw conceal cchar=⇪
 
+  syntax keyword cppNiceBoolean true conceal cchar=Ƭ
+  syntax keyword cppNiceBoolean false conceal cchar=ƒ
+
   syntax keyword javaNiceType void conceal cchar=∅
 
   syntax match javaHiddenOperator /\S\zs()\ze\(\S\| [^{]\)/ conceal
@@ -47,6 +50,7 @@ endif
 hi link javaNiceConstant Constant
 hi link javaNiceKeyword Keyword
 hi link javaNiceOperator Operator
+hi link cppNiceBoolean Boolean
 hi link javaNiceType Type
 
 hi! link Conceal Operator
