@@ -39,6 +39,8 @@ if s:extraConceal
   syntax keyword cppNiceBoolean false conceal cchar=ƒ
 
   syntax keyword javaNiceType void conceal cchar=∅
+  syntax keyword cppNiceType char conceal cchar=ⅽ
+  syntax keyword cppNiceType int conceal cchar=ⅰ
 
   syntax match javaHiddenOperator /\S\zs()\ze\(\S\| [^{]\)/ conceal
   syntax match javaHiddenOperator /^\s*}$/ conceal
