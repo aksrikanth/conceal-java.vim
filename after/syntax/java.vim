@@ -13,7 +13,7 @@ syntax match javaNiceOperator "||" conceal cchar=⋁
 syntax match javaNiceOperator "&&" conceal cchar=⋀
 syntax match javaNiceOperator "->" conceal cchar=⇾
 
-syntax match cppNiceFunction "assertEquals" conceal cchar=≡
+syntax match javaNiceFunction "assertEquals" conceal cchar=≡
 
 let s:extraConceal = 1
 if s:extraConceal
@@ -21,6 +21,7 @@ if s:extraConceal
 
   syntax keyword javaNiceKeyword break conceal cchar=↯
   syntax keyword javaNiceKeyword case conceal cchar=↳
+  syntax keyword javaNiceKeyword class conceal cchar=₡
   syntax keyword javaNiceKeyword const conceal cchar=ℂ
   syntax keyword javaNiceKeyword continue conceal cchar=↟
   syntax keyword javaNiceKeyword else conceal cchar=⦂
@@ -35,12 +36,12 @@ if s:extraConceal
   syntax keyword javaNiceKeyword switch conceal cchar=⋔
   syntax keyword javaNiceKeyword throw conceal cchar=⇪
 
-  syntax keyword cppNiceBoolean true conceal cchar=Ƭ
-  syntax keyword cppNiceBoolean false conceal cchar=ƒ
+  syntax keyword javaNiceBoolean true conceal cchar=Ƭ
+  syntax keyword javaNiceBoolean false conceal cchar=ƒ
 
   syntax keyword javaNiceType void conceal cchar=∅
-  syntax keyword cppNiceType char conceal cchar=ⅽ
-  syntax keyword cppNiceType int conceal cchar=ⅰ
+  syntax keyword javaNiceType char conceal cchar=ⅽ
+  syntax keyword javaNiceType int conceal cchar=ⅰ
 
   syntax match javaHiddenOperator /\S\zs()\ze\(\S\| [^{]\)/ conceal
   syntax match javaHiddenOperator /^\s*}$/ conceal
@@ -52,7 +53,7 @@ endif
 hi link javaNiceConstant Constant
 hi link javaNiceKeyword Keyword
 hi link javaNiceOperator Operator
-hi link cppNiceBoolean Boolean
+hi link javaNiceBoolean Boolean
 hi link javaNiceType Type
 
 hi! link Conceal Operator
